@@ -13,6 +13,7 @@ const StyledNav = styled.nav(
         max-width: 100vw;
         flex-direction: row;
         font-weight: ${theme.fontWeights.extrabold};
+        background-color: ${theme.colors.yellow};
         font-size: 24px;
         line-height: 33px;
         color: ${theme.colors.black};
@@ -33,8 +34,8 @@ const Navbar = () => (
             display: "flex",
             gap: "18px",
         }}>
-            <Button bgColor={fstoreTheme.colors.white} fontColor={fstoreTheme.colors.black}>Search</Button>
-            <Button bgColor={fstoreTheme.colors.black} fontColor={fstoreTheme.colors.white}>Sign In</Button>
+            <Button bgColor={fstoreTheme.colors.yellow} fontColor={fstoreTheme.colors.black}>Search</Button>
+            <Button bgColor={fstoreTheme.colors.black} fontColor={fstoreTheme.colors.yellow}>Sign In</Button>
         </div>
     </StyledNav>
 );

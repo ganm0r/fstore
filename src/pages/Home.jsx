@@ -8,7 +8,7 @@ import axios from '../helpers/apiClient';
 const SECTIONS = [
     {
         category: "men's clothing",
-        bgColor: fstoreTheme.colors.white,
+        bgColor: fstoreTheme.colors.yellow,
         fontColor: fstoreTheme.colors.black,
     },
     {
@@ -18,7 +18,7 @@ const SECTIONS = [
     },
     {
         category: "electronics",
-        bgColor: fstoreTheme.colors.white,
+        bgColor: fstoreTheme.colors.yellow,
         fontColor: fstoreTheme.colors.black,
     },
     {
