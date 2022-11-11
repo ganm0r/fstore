@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledCard = styled.div(
-    ({ theme, bgColor = theme.colors.pink }) => `
+    ({ bgColor, fontColor }) => `
         display: flex;
         flex-direction: column;
         gap: 16px;
-        color: ${theme.colors.white};
+        color: ${fontColor};
         background-color: ${bgColor};
         height: 100%;
         width: 100%;
@@ -15,8 +15,8 @@ const StyledCard = styled.div(
     `
 );
 
-const Card = ({ image, title, price, bgColor }) => (
-    <StyledCard bgColor={bgColor}>
+const Card = ({ image, title, price, bgColor, fontColor }) => (
+    <StyledCard bgColor={bgColor} fontColor={fontColor}>
         <span style={{ width: '500px', height: '600px', margin: '32px' }}>
             <img src={image} width="500px" height="600px" style={{ objectFit: 'cover' }} />
         </span>
