@@ -1,6 +1,6 @@
 # [FStore](https://fstore-gndhrv.herokuapp.com)
 
-![version](https://img.shields.io/badge/version-0.1-blue.svg) ![license](https://img.shields.io/badge/license-MIT-red.svg) ![GitHub issues](https://img.shields.io/github/issues/ganm0r/fstore) ![Linter](https://github.com/ganm0r/fstore/workflows/Lint%20Code%20Base/badge.svg)
+![version](https://img.shields.io/badge/version-0.1-blue.svg) ![license](https://img.shields.io/badge/license-MIT-red.svg) ![GitHub issues](https://img.shields.io/github/issues/ganm0r/fstore)
 
 ![1](screenshots/1.png)
 
