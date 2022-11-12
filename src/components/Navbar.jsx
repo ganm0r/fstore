@@ -28,7 +28,7 @@ const Navbar = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
 
     useEffect(() => {
-        if(token && token.length > 0) {
+        if(token !== "") {
             setIsLoggedIn(true);
         }
     }, [token]);
