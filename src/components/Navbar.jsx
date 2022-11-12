@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Button } from "./Button";
 import { Logo } from "./Logo";
 import { fstoreTheme } from "../theme";
+import { useNavigate } from "react-router-dom";
 
 const StyledNav = styled.nav(
     ({ theme }) => `
@@ -21,23 +22,29 @@ const StyledNav = styled.nav(
     `
 );
 
-const Navbar = () => (
-    <StyledNav>
-        <div style={{
-            display: "flex",
-            gap: "8px"
-        }}>
-            <Logo size="54px" />
-            <h1>FSTORE</h1>
-        </div>
-        <div style={{
-            display: "flex",
-            gap: "18px",
-        }}>
-            <Button bgColor={fstoreTheme.colors.yellow} fontColor={fstoreTheme.colors.black}>Search</Button>
-            <Button bgColor={fstoreTheme.colors.black} fontColor={fstoreTheme.colors.yellow}>Sign In</Button>
-        </div>
-    </StyledNav>
-);
+const Navbar = () => {
+    const navigate = useNavigate();
+
+    return (
+        <StyledNav>
+            <div style={{
+                display: "flex",
+                gap: "8px",
+                role: 'button',
+                cursor: 'pointer',
+            }} onClick={() => navigate('/')}>
+                <Logo size="54px" />
+                <h1>FSTORE</h1>
+            </div>
+            <div style={{
+                display: "flex",
+                gap: "18px",
+            }}>
+                <Button bgColor={fstoreTheme.colors.yellow} fontColor={fstoreTheme.colors.black} onClick={() => navigate('/search')}>Search</Button>
+                <Button bgColor={fstoreTheme.colors.black} fontColor={fstoreTheme.colors.yellow}>Sign In</Button>
+            </div>
+        </StyledNav>
+    )
+};
 
 export { Navbar };
