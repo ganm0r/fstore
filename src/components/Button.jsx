@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledButton = styled.button(
-    ({ theme, bgColor, fontColor }) => `
+    ({ theme, bgColor, fontColor, marginBottom = "16px" }) => `
         width: fit-content;
         position: relative;
         background-color: ${bgColor};
@@ -13,7 +13,7 @@ const StyledButton = styled.button(
         box-sizing: border-box;
         border: none;
         padding: 16px 24px;
-        margin-bottom: 16px;
+        margin-bottom: ${marginBottom};
         cursor: pointer;
 
         &:active {
@@ -22,8 +22,8 @@ const StyledButton = styled.button(
     `
 );
 
-const Button = ({ children, bgColor, fontColor }) => (
-    <StyledButton bgColor={bgColor} fontColor={fontColor}>
+const Button = ({ children, bgColor, fontColor, marginBottom, onClick, type }) => (
+    <StyledButton bgColor={bgColor} fontColor={fontColor} marginBottom={marginBottom} onClick={onClick} type={type}>
         {children}
     </StyledButton>
 );
