@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: ${fstoreTheme.fonts.primary};
+        background-color: ${fstoreTheme.colors.yellow};
     }
 
     ::-webkit-scrollbar {
