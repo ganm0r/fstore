@@ -23,10 +23,10 @@ const App = () => {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/fstore" element={<Home products={products} />} />
-          <Route path="/fstore/search" element={<Search products={products} />} />
-          <Route path="/fstore/login" element={<Login />} />
-          <Route path="/fstore/cart" element={<Cart allproducts={products} />} />
+          <Route path="/" element={<Home products={products} />} />
+          <Route path="/search" element={<Search products={products} />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/cart" element={<Cart allproducts={products} />} />
         </Routes>
       </Router>
       <ToastContainer />
