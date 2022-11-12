@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledInput = styled.input(
-    ({ theme }) => `
+  ({ theme }) => `
         width: 90%;
         position: relative;
         border: none;
@@ -20,10 +20,10 @@ const StyledInput = styled.input(
             color: ${theme.colors.black};
         }
     `
-)
+);
 
 const Input = ({ name, value, type, placeholder, onChange }) => (
-    <StyledInput name={name} value={value} type={type} placeholder={placeholder} onChange={onChange} />
-)
+  <StyledInput name={name} value={value} type={type} placeholder={placeholder} onChange={onChange} />
+);
 
 export { Input };

@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledButton = styled.button(
-    ({ theme, bgColor, fontColor, marginBottom = "16px" }) => `
-        width: fit-content;
+  ({ theme, bgColor, fontColor, marginBottom = '16px', width }) => `
+        width: ${width ? width : 'fit-content'};
         position: relative;
         background-color: ${bgColor};
         font-size: 24px;
@@ -22,10 +22,17 @@ const StyledButton = styled.button(
     `
 );
 
-const Button = ({ children, bgColor, fontColor, marginBottom, onClick, type }) => (
-    <StyledButton bgColor={bgColor} fontColor={fontColor} marginBottom={marginBottom} onClick={onClick} type={type}>
-        {children}
-    </StyledButton>
+const Button = ({ children, bgColor, fontColor, marginBottom, onClick, type, width }) => (
+  <StyledButton
+    bgColor={bgColor}
+    fontColor={fontColor}
+    marginBottom={marginBottom}
+    onClick={onClick}
+    type={type}
+    width={width}
+  >
+    {children}
+  </StyledButton>
 );
 
 export { Button };

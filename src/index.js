@@ -1,9 +1,9 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import {ThemeProvider, createGlobalStyle } from "styled-components";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
-import App from "./App";
-import { fstoreTheme } from "./theme";
+import App from './App';
+import { fstoreTheme } from './theme';
 
 const root = document.getElementById('root');
 
@@ -21,9 +21,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-    <ThemeProvider theme={fstoreTheme}>
-        <GlobalStyle />
-        <App />
-    </ThemeProvider>,
-    root
+  <ThemeProvider theme={fstoreTheme}>
+    <GlobalStyle />
+    <App />
+  </ThemeProvider>,
+  root
 );
