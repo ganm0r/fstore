@@ -1,7 +1,6 @@
 {
   "name": "fstore",
   "version": "1.0.0",
-  "homepage": "https://ganm0r.github.io/fstore",
   "description": "astoundingly simple react app based on fakestore api",
   "license": "MIT",
   "dependencies": {

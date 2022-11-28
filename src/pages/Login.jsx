@@ -1,19 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
 import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 import { fstoreTheme } from '../theme';
+import { toast } from 'react-toastify';
 import axios from '../helpers/apiClient';
 
-const Login = () => {
-  const [userToken, setUserToken] = useState(localStorage.getItem('userToken'));
+const Login = ({ setToken }) => {
   const [formData, setFormData] = useState({
     username: '',
     password: '',
   });
 
   const navigate = useNavigate();
+
+  const userToken = localStorage.getItem('userToken');
+
+  useEffect(() => {
+    if (userToken.length > 0) {
+      navigate('/');
+    }
+  });
 
   const { username, password } = formData;
 
@@ -33,9 +40,10 @@ const Login = () => {
         password: password,
       })
       .then((res) => {
-        setUserToken(res.data.token);
+        setToken(res.data.token);
+        localStorage.setItem('userToken', res.data.token);
         toast.success('welcome to fstore!');
-        window.location.reload();
+        navigate('/');
       })
       .catch((err) => {
         if (err.response) {
@@ -43,10 +51,6 @@ const Login = () => {
         }
       });
   };
-
-  useEffect(() => {
-    localStorage.setItem('userToken', userToken);
-  }, [userToken]);
 
   return (
     <div>
